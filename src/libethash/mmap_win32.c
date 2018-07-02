@@ -23,6 +23,8 @@
 # define DWORD_LO(x) (x)
 #endif
 
+#pragma comment(lib, "Shell32.lib")
+
 void* mmap(void* start, size_t length, int prot, int flags, int fd, off_t offset)
 {
 	if (prot & ~(PROT_READ | PROT_WRITE | PROT_EXEC))
